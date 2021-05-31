@@ -1,0 +1,13 @@
+
+#extracted files from magic 
+mag/*.ext
+mag/*.nodes
+mag/*.sim
+mag/*.spice
+
+#sim files and netlists from xschem 
+xschem/*.raw
+xschem/*.spice
+
+#netgen report file 
+comp.out
