@@ -44,32 +44,19 @@ N 1500 -690 1500 -680 { lab=REF_CURRENT}
 N 1500 -620 1500 -580 { lab=REF_CURRENT_KELVIN}
 N 1500 -580 1520 -580 { lab=REF_CURRENT_KELVIN}
 N 540 -640 540 -560 { lab=SW_NODE_ESD}
-N 780 -680 780 -660 {}
-N 760 -460 780 -460 {}
-N 600 -560 620 -560 {}
-C {devices/ipin.sym} 260 -580 0 0 {name=p2 lab=N_IN}
-C {devices/ipin.sym} 260 -680 0 0 {name=p3 lab=VSS}
-C {devices/ipin.sym} 260 -640 0 0 {name=p5 lab=P_IN}
-C {devices/ipin.sym} 260 -620 0 0 {name=p6 lab=P_IN_N}
-C {devices/ipin.sym} 260 -560 0 0 {name=p7 lab=N_IN_N}
-C {devices/ipin.sym} 260 -720 0 0 {name=p1 lab=VDD_PWR}
-C {devices/ipin.sym} 260 -520 0 0 {name=p8 lab=REF_CURRENT}
-C {devices/lab_wire.sym} 960 -1220 0 0 {name=l1 sig_type=std_logic lab=VDD_PWR}
-C {devices/lab_wire.sym} 940 -940 0 0 {name=l2 sig_type=std_logic lab=VSS}
-C {sky130_fd_pr/nfet_g5v0d10v5.sym} 1140 -550 0 0 {name=M13
-L=0.5
-W=4.38
-nf=1
-mult=2520
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_g5v0d10v5
-spiceprefix=X
-}
+N 780 -680 780 -660 { lab=VDD_PWR}
+N 760 -460 780 -460 { lab=VSS}
+N 600 -560 620 -560 { lab=SW_NODE_ESD}
+C {devices/ipin.sym} 220 -900 0 0 {name=p2 lab=N_IN}
+C {devices/ipin.sym} 220 -880 0 0 {name=p7 lab=N_IN_N}
+C {devices/ipin.sym} 220 -840 0 0 {name=p5 lab=P_IN}
+C {devices/ipin.sym} 220 -820 0 0 {name=p6 lab=P_IN_N}
+C {devices/ipin.sym} 220 -780 0 0 {name=p8 lab=REF_CURRENT}
+C {devices/ipin.sym} 220 -760 0 0 {name=p10 lab=REF_CURRENT_KELVIN}
+C {devices/ipin.sym} 220 -710 0 0 {name=p9 lab=SW_NODE}
+C {devices/ipin.sym} 220 -690 0 0 {name=p4 lab=SW_NODE_ESD}
+C {devices/ipin.sym} 220 -640 0 0 {name=p1 lab=VDD_PWR}
+C {devices/ipin.sym} 220 -620 0 0 {name=p3 lab=VSS}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 1140 -730 0 0 {name=M14
 L=0.5
 W=4.38
@@ -104,7 +91,20 @@ C {devices/lab_wire.sym} 1080 -550 0 0 {name=l7 sig_type=std_logic lab=N_DRIVE}
 C {devices/lab_wire.sym} 1080 -730 0 0 {name=l8 sig_type=std_logic lab=P_DRIVE}
 C {devices/lab_wire.sym} 1330 -780 0 0 {name=l10 sig_type=std_logic lab=VDD_PWR}
 C {devices/lab_wire.sym} 1340 -730 0 0 {name=l16 sig_type=std_logic lab=P_DRIVE}
-C {devices/ipin.sym} 250 -390 0 0 {name=p9 lab=SW_NODE}
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 1140 -550 0 0 {name=M13
+L=0.5
+W=4.38
+nf=1
+mult=2520
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_g5v0d10v5
+spiceprefix=X
+}
 C {devices/lab_wire.sym} 1160 -630 0 0 {name=l17 sig_type=std_logic lab=SW_NODE}
 C {gate_drive.sym} 960 -1080 0 0 {name=x1}
 C {gate_drive.sym} 1500 -1080 0 0 {name=x2}
@@ -116,7 +116,7 @@ C {devices/lab_wire.sym} 1680 -1080 0 1 {name=l30 sig_type=std_logic lab=P_DRIVE
 C {devices/lab_wire.sym} 1320 -1120 0 0 {name=l31 sig_type=std_logic lab=P_IN}
 C {devices/lab_wire.sym} 1320 -1040 0 0 {name=l32 sig_type=std_logic lab=P_IN_N}
 C {devices/lab_wire.sym} 1500 -1220 0 0 {name=l33 sig_type=std_logic lab=VDD_PWR}
-C {devices/ipin.sym} 250 -330 0 0 {name=p4 lab=SW_NODE_ESD}
+C {devices/lab_wire.sym} 960 -1220 0 0 {name=l1 sig_type=std_logic lab=VDD_PWR}
 C {sky130_fd_pr/res_generic_po.sym} 490 -560 1 0 {name=R1
 W=2
 L=6.3
@@ -126,10 +126,10 @@ mult=1}
 C {devices/lab_wire.sym} 440 -560 0 0 {name=l3 sig_type=std_logic lab=SW_NODE}
 C {devices/lab_wire.sym} 540 -640 0 1 {name=l4 sig_type=std_logic lab=SW_NODE_ESD}
 C {devices/lab_wire.sym} 1520 -580 0 1 {name=l11 sig_type=std_logic lab=REF_CURRENT_KELVIN}
-C {devices/ipin.sym} 260 -490 0 0 {name=p10 lab=REF_CURRENT_KELVIN}
+C {devices/lab_wire.sym} 940 -940 0 0 {name=l2 sig_type=std_logic lab=VSS}
 C {res_generic_m2.sym} 1500 -650 0 0 {name=R2
-W=1
-L=1
+W=0.5
+L=0.5
 model=res_generic_m2
 spiceprefix=R
 mult=1}
