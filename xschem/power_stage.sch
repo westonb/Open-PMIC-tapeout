@@ -121,7 +121,7 @@ C {sky130_fd_pr/res_generic_po.sym} 490 -560 1 0 {name=R1
 W=2
 L=6.3
 model=res_generic_po
-spiceprefix=X
+spiceprefix=R
 mult=1}
 C {devices/lab_wire.sym} 440 -560 0 0 {name=l3 sig_type=std_logic lab=SW_NODE}
 C {devices/lab_wire.sym} 540 -640 0 1 {name=l4 sig_type=std_logic lab=SW_NODE_ESD}
