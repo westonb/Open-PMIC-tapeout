@@ -1,4 +1,4 @@
-**.subckt analog_wrapper_tb
+.subckt analog_wrapper_tb
 x1 vdda1 vdda2 vssa1 vssa2 vccd1 vccd2 vssd1 vssd2 wb_clk_i wbs_rst_i wbs_stb_i wbs_cyc_i wbs_we_i
 + wbs_sel_i[3] wbs_sel_i[2] wbs_sel_i[1] wbs_sel_i[0] wbs_dat_i[31] wbs_dat_i[30] wbs_dat_i[29] wbs_dat_i[28]
 + wbs_dat_i[27] wbs_dat_i[26] wbs_dat_i[25] wbs_dat_i[24] wbs_dat_i[23] wbs_dat_i[22] wbs_dat_i[21] wbs_dat_i[20]
@@ -207,7 +207,7 @@ write analog_wrapper_tb.raw
 
 
 **** end user architecture code
-**.ends
+.ends
 
 * expanding   symbol:  user_analog_project_wrapper.sym # of pins=32
 * sym_path: /home/wbraun/projects/Open-PMIC-tapeout/xschem/user_analog_project_wrapper.sym
@@ -348,8 +348,7 @@ x1 cycle_end gpio_analog[17] gpio_analog[10] gpio_analog[16] gpio_analog[15] ove
 x2 cycle_end N_IN N_IN_N io_in_3v3[8] io_in_3v3[10] io_in_3v3[14] overcurrent P_IN P_IN_N
 + io_in_3v3[9] io_in_3v3[11] io_in_3v3[13] io_in_3v3[12] io_in_3v3[16] timeout_int TIMEOUT_OUT io_in_3v3[15] vdda2
 + vssa2 switch_control
-x3 VDD_PWR VSS_PWR P_IN P_IN_N N_IN SENSE_FET SW_NODE N_IN_N SW_NODE_ESD SENSE_FET_KELVIN
-+ power_stage
+x3 N_IN N_IN_N P_IN P_IN_N SENSE_FET SENSE_FET_KELVIN SW_NODE SW_NODE_ESD VDD_PWR vssa2 power_stage
 x4 gpio_analog[14] timeout_int vdda2 vssa2 osc_placeholder
 RR17 io_analog[3] SW_NODE sky130_fd_pr__res_generic_m4 W=25 L=1 m=1
 RR18 io_analog[3] SW_NODE sky130_fd_pr__res_generic_m3 W=25 L=1 m=1
@@ -360,24 +359,24 @@ RR22 io_analog[2] SW_NODE sky130_fd_pr__res_generic_m5 W=25 L=1 m=1
 RR23 io_analog[1] SW_NODE sky130_fd_pr__res_generic_m4 W=25 L=1 m=1
 RR24 io_analog[1] SW_NODE sky130_fd_pr__res_generic_m3 W=25 L=1 m=1
 RR25 io_analog[1] SW_NODE sky130_fd_pr__res_generic_m5 W=25 L=1 m=1
-RR14 io_analog[10] VSS_PWR sky130_fd_pr__res_generic_m4 W=25 L=1 m=1
-RR15 io_analog[10] VSS_PWR sky130_fd_pr__res_generic_m3 W=25 L=1 m=1
-RR16 io_analog[10] VSS_PWR sky130_fd_pr__res_generic_m5 W=25 L=1 m=1
-RR26 io_analog[9] VSS_PWR sky130_fd_pr__res_generic_m4 W=25 L=1 m=1
-RR27 io_analog[9] VSS_PWR sky130_fd_pr__res_generic_m3 W=25 L=1 m=1
-RR28 io_analog[9] VSS_PWR sky130_fd_pr__res_generic_m5 W=25 L=1 m=1
-RR29 io_analog[8] VSS_PWR sky130_fd_pr__res_generic_m4 W=25 L=1 m=1
-RR30 io_analog[8] VSS_PWR sky130_fd_pr__res_generic_m3 W=25 L=1 m=1
-RR31 io_analog[8] VSS_PWR sky130_fd_pr__res_generic_m5 W=25 L=1 m=1
-RR32 io_analog[0] VSS_PWR sky130_fd_pr__res_generic_m4 W=25 L=1 m=1
-RR33 io_analog[0] VSS_PWR sky130_fd_pr__res_generic_m3 W=25 L=1 m=1
-RR34 io_analog[0] VSS_PWR sky130_fd_pr__res_generic_m5 W=25 L=1 m=1
-RR10 io_analog[4] io_clamp_high[0] sky130_fd_pr__res_generic_m3 W=11 L=1 m=1
-RR11 VSS_PWR io_clamp_low[0] sky130_fd_pr__res_generic_m3 W=11 L=1 m=1
-RR4 io_analog[6] io_clamp_high[2] sky130_fd_pr__res_generic_m3 W=11 L=1 m=1
-RR5 VSS_PWR io_clamp_low[2] sky130_fd_pr__res_generic_m3 W=11 L=1 m=1
-RR8 io_analog[5] io_clamp_high[1] sky130_fd_pr__res_generic_m3 W=11 L=1 m=1
-RR9 VSS_PWR io_clamp_low[1] sky130_fd_pr__res_generic_m3 W=11 L=1 m=1
+RR14 io_analog[10] vssa2 sky130_fd_pr__res_generic_m4 W=25 L=1 m=1
+RR15 io_analog[10] vssa2 sky130_fd_pr__res_generic_m3 W=25 L=1 m=1
+RR16 io_analog[10] vssa2 sky130_fd_pr__res_generic_m5 W=25 L=1 m=1
+RR26 io_analog[9] vssa2 sky130_fd_pr__res_generic_m4 W=25 L=1 m=1
+RR27 io_analog[9] vssa2 sky130_fd_pr__res_generic_m3 W=25 L=1 m=1
+RR28 io_analog[9] vssa2 sky130_fd_pr__res_generic_m5 W=25 L=1 m=1
+RR29 io_analog[8] vssa2 sky130_fd_pr__res_generic_m4 W=25 L=1 m=1
+RR30 io_analog[8] vssa2 sky130_fd_pr__res_generic_m3 W=25 L=1 m=1
+RR31 io_analog[8] vssa2 sky130_fd_pr__res_generic_m5 W=25 L=1 m=1
+RR32 io_analog[0] vssa2 sky130_fd_pr__res_generic_m4 W=25 L=1 m=1
+RR33 io_analog[0] vssa2 sky130_fd_pr__res_generic_m3 W=25 L=1 m=1
+RR34 io_analog[0] vssa2 sky130_fd_pr__res_generic_m5 W=25 L=1 m=1
+RR10 VDD_PWR io_clamp_high[0] sky130_fd_pr__res_generic_m3 W=11 L=1 m=1
+RR11 vssa2 io_clamp_low[0] sky130_fd_pr__res_generic_m3 W=11 L=1 m=1
+RR4 VDD_PWR io_clamp_high[2] sky130_fd_pr__res_generic_m3 W=11 L=1 m=1
+RR5 vssa2 io_clamp_low[2] sky130_fd_pr__res_generic_m3 W=11 L=1 m=1
+RR8 VDD_PWR io_clamp_high[1] sky130_fd_pr__res_generic_m3 W=11 L=1 m=1
+RR9 vssa2 io_clamp_low[1] sky130_fd_pr__res_generic_m3 W=11 L=1 m=1
 RR6 io_analog[4] VDD_PWR sky130_fd_pr__res_generic_m4 W=25 L=1 m=1
 RR7 io_analog[4] VDD_PWR sky130_fd_pr__res_generic_m3 W=25 L=1 m=1
 RR12 io_analog[4] VDD_PWR sky130_fd_pr__res_generic_m5 W=25 L=1 m=1
@@ -403,6 +402,9 @@ x8 vdda2 vssa2 gpio_analog[17] esd_cell
 x9 vdda2 vssa2 gpio_analog[16] esd_cell
 x10 vdda2 vssa2 gpio_analog[15] esd_cell
 x11 vdda2 vssa2 gpio_analog[14] esd_cell
+RR1 io_analog[7] vssa2 sky130_fd_pr__res_generic_m4 W=25 L=1 m=1
+RR2 io_analog[7] vssa2 sky130_fd_pr__res_generic_m3 W=25 L=1 m=1
+RR3 io_analog[7] vssa2 sky130_fd_pr__res_generic_m5 W=25 L=1 m=1
 .ends
 
 
@@ -529,43 +531,55 @@ x70 CYCLE_END net59 vss vss vdd vdd net58 sky130_fd_sc_hvl__or2_1
 x71 OVERCURRENT OC_EN vss vss vdd vdd net59 sky130_fd_sc_hvl__and2_1
 x21 net8 vss vss vdd vdd net7 sky130_fd_sc_hvl__inv_1
 x23 TIMEOUT vss vss vdd vdd net12 sky130_fd_sc_hvl__inv_1
-XM1 vdd vss vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=1 W=48 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM1 vdd vss vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=1 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1 
-XM3 vss vdd vss vss sky130_fd_pr__nfet_g5v0d10v5 L=1 W=36 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM3 vss vdd vss vss sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1 
+x72 TIMEOUT_EXT vss vss vdd vdd sky130_fd_sc_hvl__diode_2
+x73 TIMEOUT_INT vss vss vdd vdd sky130_fd_sc_hvl__diode_2
+x74 TIMEOUT_SEL vss vss vdd vdd sky130_fd_sc_hvl__diode_2
+x76 PMOS_DT vss vss vdd vdd sky130_fd_sc_hvl__diode_2
+x78 NMOS_DT vss vss vdd vdd sky130_fd_sc_hvl__diode_2
+x79 CYCLE_END vss vss vdd vdd sky130_fd_sc_hvl__diode_2
+x80 OVERCURRENT vss vss vdd vdd sky130_fd_sc_hvl__diode_2
+x81 OC_EN vss vss vdd vdd sky130_fd_sc_hvl__diode_2
+x82 SW_OVERRIDE vss vss vdd vdd sky130_fd_sc_hvl__diode_2
+x83 PMOS_VAL vss vss vdd vdd sky130_fd_sc_hvl__diode_2
+x84 NMOS_VAL vss vss vdd vdd sky130_fd_sc_hvl__diode_2
+x85 SW_EN vss vss vdd vdd sky130_fd_sc_hvl__diode_2
 .ends
 
 
 * expanding   symbol:  power_stage.sym # of pins=10
 * sym_path: /home/wbraun/projects/Open-PMIC-tapeout/xschem/power_stage.sym
 * sch_path: /home/wbraun/projects/Open-PMIC-tapeout/xschem/power_stage.sch
-.subckt power_stage  VDD_PWR VSS P_IN P_IN_N N_IN REF_CURRENT SW_NODE N_IN_N SW_NODE_ESD
-+ REF_CURRENT_KELVIN
+.subckt power_stage  N_IN N_IN_N P_IN P_IN_N REF_CURRENT REF_CURRENT_KELVIN SW_NODE SW_NODE_ESD
++ VDD_PWR VSS
 *.ipin N_IN
-*.ipin VSS
+*.ipin N_IN_N
 *.ipin P_IN
 *.ipin P_IN_N
-*.ipin N_IN_N
-*.ipin VDD_PWR
 *.ipin REF_CURRENT
+*.ipin REF_CURRENT_KELVIN
 *.ipin SW_NODE
 *.ipin SW_NODE_ESD
-*.ipin REF_CURRENT_KELVIN
-XM13 SW_NODE N_DRIVE VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4.38 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2520 m=2520 
+*.ipin VDD_PWR
+*.ipin VSS
 XM14 SW_NODE P_DRIVE VDD_PWR VDD_PWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4.38 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=4506 m=4506 
 XM15 REF_CURRENT P_DRIVE VDD_PWR VDD_PWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4.38 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=6 m=6 
+XM13 SW_NODE N_DRIVE VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4.38 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2520 m=2520 
 x1 N_IN N_IN_N VDD_PWR VSS N_DRIVE gate_drive
 x2 P_IN P_IN_N VDD_PWR VSS P_DRIVE gate_drive
-XR1 SW_NODE SW_NODE_ESD sky130_fd_pr__res_generic_po W=2 L=6.3 mult=1 m=1
-RR2 REF_CURRENT_KELVIN REF_CURRENT sky130_fd_pr__res_generic_m2 W=1 L=1 m=1
+RR1 SW_NODE SW_NODE_ESD sky130_fd_pr__res_generic_po W=2 L=6.3 mult=1 m=1
+RR2 REF_CURRENT_KELVIN REF_CURRENT sky130_fd_pr__res_generic_m2 W=0.5 L=0.5 m=1
 x3 VDD_PWR VSS SW_NODE_ESD esd_cell_well
 .ends
 

@@ -172,6 +172,18 @@ N 760 -1070 780 -1070 { lab=vss}
 N 760 -1170 760 -1160 { lab=vss}
 N 760 -1170 780 -1170 { lab=vss}
 N 780 -1170 780 -1130 { lab=vss}
+N 1900 -1500 1920 -1500 { lab=TIMEOUT_EXT}
+N 1900 -1540 1920 -1540 { lab=TIMEOUT_INT}
+N 1900 -1580 1920 -1580 { lab=TIMEOUT_SEL}
+N 3390 -1470 3410 -1470 { lab=PMOS_DT}
+N 2720 -1480 2740 -1480 { lab=SW_EN}
+N 3070 -1480 3090 -1480 { lab=NMOS_VAL}
+N 2710 -1520 2740 -1520 { lab=PMOS_VAL}
+N 2720 -1560 2740 -1560 { lab=SW_OVERRIDE}
+N 2300 -1580 2320 -1580 { lab=OC_EN}
+N 2300 -1540 2320 -1540 { lab=OVERCURRENT}
+N 2300 -1500 2320 -1500 { lab=CYCLE_END}
+N 3720 -1450 3740 -1450 { lab=NMOS_DT}
 C {devices/ipin.sym} 390 -1340 0 0 {name=p9 lab=CYCLE_END}
 C {devices/ipin.sym} 390 -1300 0 0 {name=p6 lab=NMOS_DRV}
 C {devices/ipin.sym} 390 -1280 0 0 {name=p16 lab=NMOS_DRV_N}
@@ -296,7 +308,7 @@ C {devices/lab_wire.sym} 1040 -960 0 0 {name=l31 sig_type=std_logic lab=TIMEOUT_
 C {devices/lab_wire.sym} 1500 -1020 0 1 {name=l32 sig_type=std_logic lab=TIMEOUT_OUT}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 740 -1230 0 0 {name=M1
 L=1
-W=48
+W=2
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -313,7 +325,7 @@ C {devices/lab_wire.sym} 700 -1230 0 0 {name=l34 sig_type=std_logic lab=vss}
 C {devices/lab_wire.sym} 710 -1130 0 0 {name=l35 sig_type=std_logic lab=vdd}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 740 -1130 0 0 {name=M3
 L=1
-W=36
+W=1.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -326,9 +338,30 @@ model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices/lab_wire.sym} 760 -1070 0 0 {name=l37 sig_type=std_logic lab=vss}
-C {devices/code.sym} 910 -1370 0 0 {name=STDCELL_MODELS 
-only_toplevel=true
-place=end
-format="tcleval(@value )"
-value="[sky130_models]"
-}
+C {sky130_stdcells/diode_2.sym} 2010 -1500 0 0 {name=x72 VGND=vss VNB=vss VPB=vdd VPWR=vdd prefix=sky130_fd_sc_hvl__ }
+C {sky130_stdcells/diode_2.sym} 2010 -1540 0 0 {name=x73 VGND=vss VNB=vss VPB=vdd VPWR=vdd prefix=sky130_fd_sc_hvl__ }
+C {sky130_stdcells/diode_2.sym} 2010 -1580 0 0 {name=x74 VGND=vss VNB=vss VPB=vdd VPWR=vdd prefix=sky130_fd_sc_hvl__ }
+C {sky130_stdcells/diode_2.sym} 3500 -1470 0 0 {name=x76 VGND=vss VNB=vss VPB=vdd VPWR=vdd prefix=sky130_fd_sc_hvl__ }
+C {sky130_stdcells/diode_2.sym} 3830 -1450 0 0 {name=x78 VGND=vss VNB=vss VPB=vdd VPWR=vdd prefix=sky130_fd_sc_hvl__ }
+C {sky130_stdcells/diode_2.sym} 2410 -1500 0 0 {name=x79 VGND=vss VNB=vss VPB=vdd VPWR=vdd prefix=sky130_fd_sc_hvl__ }
+C {sky130_stdcells/diode_2.sym} 2410 -1540 0 0 {name=x80 VGND=vss VNB=vss VPB=vdd VPWR=vdd prefix=sky130_fd_sc_hvl__ }
+C {sky130_stdcells/diode_2.sym} 2410 -1580 0 0 {name=x81 VGND=vss VNB=vss VPB=vdd VPWR=vdd prefix=sky130_fd_sc_hvl__ }
+C {sky130_stdcells/diode_2.sym} 2830 -1560 0 0 {name=x82 VGND=vss VNB=vss VPB=vdd VPWR=vdd prefix=sky130_fd_sc_hvl__ }
+C {sky130_stdcells/diode_2.sym} 2830 -1520 0 0 {name=x83 VGND=vss VNB=vss VPB=vdd VPWR=vdd prefix=sky130_fd_sc_hvl__ }
+C {devices/lab_wire.sym} 1900 -1500 0 0 {name=l36 sig_type=std_logic lab=TIMEOUT_EXT}
+C {devices/lab_wire.sym} 1900 -1540 0 0 {name=l38 sig_type=std_logic lab=TIMEOUT_INT}
+C {devices/lab_wire.sym} 1900 -1580 0 0 {name=l39 sig_type=std_logic lab=TIMEOUT_SEL}
+C {devices/lab_wire.sym} 3390 -1470 0 0 {name=l41 sig_type=std_logic lab=PMOS_DT}
+C {devices/lab_wire.sym} 3720 -1450 0 0 {name=l43 sig_type=std_logic lab=NMOS_DT}
+C {devices/lab_wire.sym} 2300 -1500 0 0 {name=l44 sig_type=std_logic lab=CYCLE_END}
+C {devices/lab_wire.sym} 2300 -1540 0 0 {name=l45 sig_type=std_logic lab=OVERCURRENT}
+C {devices/lab_wire.sym} 2300 -1580 0 0 {name=l46 sig_type=std_logic lab=OC_EN}
+C {devices/lab_wire.sym} 2720 -1560 0 0 {name=l47 sig_type=std_logic lab=SW_OVERRIDE}
+C {devices/lab_wire.sym} 2710 -1520 0 0 {name=l48 sig_type=std_logic lab=PMOS_VAL}
+C {devices/lab_wire.sym} 3070 -1480 0 0 {name=l49 sig_type=std_logic lab=NMOS_VAL}
+C {sky130_stdcells/diode_2.sym} 3180 -1480 0 0 {name=x84 VGND=vss VNB=vss VPB=vdd VPWR=vdd prefix=sky130_fd_sc_hvl__ }
+C {sky130_stdcells/diode_2.sym} 2830 -1480 0 0 {name=x85 VGND=vss VNB=vss VPB=vdd VPWR=vdd prefix=sky130_fd_sc_hvl__ }
+C {devices/lab_wire.sym} 2720 -1480 0 0 {name=l50 sig_type=std_logic lab=SW_EN}
+C {devices/code.sym} 1160 -1460 0 0 {name=s1 only_toplevel=true value="
+.include /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
+"}
