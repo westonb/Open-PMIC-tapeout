@@ -323,10 +323,10 @@ x70 CYCLE_END net59 vss vss vdd vdd net58 sky130_fd_sc_hvl__or2_1
 x71 OVERCURRENT OC_EN vss vss vdd vdd net59 sky130_fd_sc_hvl__and2_1
 x21 net8 vss vss vdd vdd net7 sky130_fd_sc_hvl__inv_1
 x23 TIMEOUT vss vss vdd vdd net12 sky130_fd_sc_hvl__inv_1
-XM1 vdd vss vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=1 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM1 vdd vss vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=1 W=36 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1 
-XM3 vss vdd vss vss sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM3 vss vdd vss vss sky130_fd_pr__nfet_g5v0d10v5 L=1 W=27 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1 
 x72 TIMEOUT_EXT vss vss vdd vdd sky130_fd_sc_hvl__diode_2

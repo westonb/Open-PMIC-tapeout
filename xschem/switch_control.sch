@@ -308,7 +308,7 @@ C {devices/lab_wire.sym} 1040 -960 0 0 {name=l31 sig_type=std_logic lab=TIMEOUT_
 C {devices/lab_wire.sym} 1500 -1020 0 1 {name=l32 sig_type=std_logic lab=TIMEOUT_OUT}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 740 -1230 0 0 {name=M1
 L=1
-W=2
+W=36
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -325,7 +325,7 @@ C {devices/lab_wire.sym} 700 -1230 0 0 {name=l34 sig_type=std_logic lab=vss}
 C {devices/lab_wire.sym} 710 -1130 0 0 {name=l35 sig_type=std_logic lab=vdd}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 740 -1130 0 0 {name=M3
 L=1
-W=1.5
+W=27
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
