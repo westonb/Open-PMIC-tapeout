@@ -314,7 +314,7 @@ C {devices/code_shown.sym} 920 -130 0 0 {name=s1 only_toplevel=false value="
 
 .control
 save all
-tran 10n 300u
+tran 40n 300u
 write analog_wrapper_tb.raw
 .endc
 "}
@@ -340,7 +340,7 @@ device="ceramic capacitor"}
 C {devices/gnd.sym} 200 -780 0 0 {name=l61 lab=GND}
 C {devices/lab_pin.sym} 200 -980 2 1 {name=l16 sig_type=std_logic lab=vcomp
 }
-C {devices/isource.sym} -560 -840 2 0 {name=I1 value=0
+C {devices/isource.sym} -560 -840 2 0 {name=I1 value=50u
 }
 C {devices/gnd.sym} -560 -790 0 0 {name=l18 lab=GND}
 C {devices/lab_pin.sym} -560 -970 0 0 {name=l19 sig_type=std_logic lab=iosc
@@ -455,7 +455,7 @@ device="ceramic capacitor"}
 C {devices/lab_wire.sym} 1220 -1680 0 1 {name=l30 sig_type=std_logic lab=vdda1}
 C {devices/gnd.sym} 980 -1400 0 0 {name=l35 lab=GND}
 C {devices/lab_wire.sym} 1220 -1420 0 1 {name=l39 sig_type=std_logic lab=vssa1}
-C {devices/vsource.sym} 980 -1490 0 0 {name=V8 value=\{VIN\}}
+C {devices/vsource.sym} 980 -1490 0 0 {name=V8 value="PWL(0 0 1u \{VIN\})"}
 C {devices/res.sym} 1010 -2100 3 1 {name=R4
 value=20m
 footprint=10
@@ -484,7 +484,7 @@ device="ceramic capacitor"}
 C {devices/lab_wire.sym} 1180 -2100 0 1 {name=l42 sig_type=std_logic lab=vdda2}
 C {devices/gnd.sym} 940 -1820 0 0 {name=l43 lab=GND}
 C {devices/lab_wire.sym} 1180 -1840 0 1 {name=l57 sig_type=std_logic lab=vssa2}
-C {devices/vsource.sym} 940 -1910 0 0 {name=V4 value=\{VIN\}}
+C {devices/vsource.sym} 940 -1910 0 0 {name=V4 value="PWL(0 0 1u \{VIN\})"}
 C {devices/res.sym} 1010 -2480 3 1 {name=R13
 value=20m
 footprint=10
@@ -569,7 +569,7 @@ value=200p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 1370 -1400 0 0 {name=l72 lab=GND}
-C {devices/vsource.sym} 1370 -1490 0 0 {name=V9 value=\{VIN\}}
+C {devices/vsource.sym} 1370 -1490 0 0 {name=V9 value="PWL(0 0 1u \{VIN\})"}
 C {devices/lab_wire.sym} 1610 -1660 0 1 {name=l68 sig_type=std_logic lab=io_analog[6:4]}
 C {devices/lab_wire.sym} 1620 -1420 0 1 {name=l73 sig_type=std_logic lab=io_analog[10:8]}
 C {devices/lab_wire.sym} 1620 -1380 0 1 {name=l74 sig_type=std_logic lab=io_analog[0]}
@@ -752,7 +752,7 @@ m=1}
 C {devices/lab_wire.sym} -60 -1320 0 1 {name=l121 sig_type=std_logic lab=io_in3v3[8]}
 C {devices/lab_wire.sym} -160 -1320 0 0 {name=l122 sig_type=std_logic lab=nmos_dt}
 C {devices/lab_wire.sym} -1280 -1740 0 1 {name=l1 sig_type=std_logic lab=vssa2}
-C {devices/vsource.sym} -1280 -1790 0 0 {name=V1 value=0}
+C {devices/vsource.sym} -1280 -1790 0 0 {name=V1 value=\{VIN\}}
 C {devices/lab_wire.sym} -1280 -1840 0 1 {name=l2 sig_type=std_logic lab=timeout_sel}
 C {devices/lab_wire.sym} -1280 -1880 0 1 {name=l3 sig_type=std_logic lab=vssa2}
 C {devices/vsource.sym} -1280 -1930 0 0 {name=V2 value=\{VIN\}}

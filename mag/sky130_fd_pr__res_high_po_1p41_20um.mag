@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1621741225
+timestamp 1624002729
 << xpolycontact >>
 rect -141 2000 141 2432
 rect -141 -2432 141 -2000

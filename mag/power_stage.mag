@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1623205543
+timestamp 1624002729
 << metal1 >>
 rect -20400 3360 20500 49600
 rect -199 505 201 565
@@ -567,30 +567,30 @@ rect 22500 -30024 96100 -29424
 rect -119200 -32280 -85199 -30024
 rect -23576 -32280 96100 -30024
 rect -119200 -64000 96100 -32280
-use sky130_fd_pr__res_generic_po_U6Z5S8  sky130_fd_pr__res_generic_po_U6Z5S8_0
-timestamp 1623025674
-transform 1 0 0 0 1 -600
-box -200 -703 200 703
-use nmos_waffle_36x36  nmos_waffle_36x36_0
-timestamp 1622614837
-transform 1 0 22500 0 1 0
-box -10800 -10800 50400 50400
-use pmos_waffle_48x48  pmos_waffle_48x48_0
-timestamp 1622615317
-transform -1 0 -22400 0 1 0
-box -10800 -10800 63600 63600
-use esd_cell_well  esd_cell_well_0
-timestamp 1622610789
-transform 0 -1 -300 1 0 -7000
-box -2400 -3400 2400 2800
-use gate_drive  gate_drive_0
-timestamp 1621730769
-transform 0 -1 -17500 1 0 -20900
-box -8500 -2400 7600 4000
 use gate_drive  gate_drive_1
-timestamp 1621730769
+timestamp 1624002729
 transform 0 -1 18500 1 0 -20900
 box -8500 -2400 7600 4000
+use gate_drive  gate_drive_0
+timestamp 1624002729
+transform 0 -1 -17500 1 0 -20900
+box -8500 -2400 7600 4000
+use esd_cell_well  esd_cell_well_0
+timestamp 1624002729
+transform 0 -1 -300 1 0 -7000
+box -2400 -3400 2400 2800
+use pmos_waffle_48x48  pmos_waffle_48x48_0
+timestamp 1624002729
+transform -1 0 -22400 0 1 0
+box -10800 -10800 63600 63600
+use nmos_waffle_36x36  nmos_waffle_36x36_0
+timestamp 1624002729
+transform 1 0 22500 0 1 0
+box -10800 -10800 50400 50400
+use sky130_fd_pr__res_generic_po_U6Z5S8  sky130_fd_pr__res_generic_po_U6Z5S8_0
+timestamp 1624002729
+transform 1 0 0 0 1 -600
+box -200 -703 200 703
 << labels >>
 flabel metal2 -16682 -64204 -16622 -64203 1 FreeSans 400 0 0 0 p_in
 port 3 n

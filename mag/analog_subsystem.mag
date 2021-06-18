@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1622500023
+timestamp 1624002729
 << metal2 >>
 rect -13684 16389 -13584 16398
 rect -13884 15795 -13875 15895
@@ -191,22 +191,22 @@ rect 12000 -17259 13000 -740
 rect 12000 -18740 12120 -17259
 rect 12900 -18740 13000 -17259
 rect 12000 -27800 13000 -18740
-use folded_cascode_p_in  folded_cascode_p_in_0
-timestamp 1622500023
-transform 1 0 -3000 0 1 -22500
-box -9000 -4500 15000 4500
-use current_sense  current_sense_0
-timestamp 1622500023
-transform -1 0 0 0 1 -9000
-box -12000 -9000 12000 9000
-use bias_distribution  bias_distribution_0
-timestamp 1621739502
-transform 1 0 -15000 0 1 -22500
-box -3000 -4500 3000 4500
 use modulator  modulator_0
-timestamp 1622500023
+timestamp 1624002729
 transform 1 0 0 0 -1 9000
 box -12000 -9000 12000 9000
+use bias_distribution  bias_distribution_0
+timestamp 1624002729
+transform 1 0 -15000 0 1 -22500
+box -3000 -4500 3000 4500
+use current_sense  current_sense_0
+timestamp 1624002729
+transform -1 0 0 0 1 -9000
+box -12000 -9000 12000 9000
+use folded_cascode_p_in  folded_cascode_p_in_0
+timestamp 1624002729
+transform 1 0 -3000 0 1 -22500
+box -9000 -4500 15000 4500
 << labels >>
 flabel metal3 -18154 -22459 -18152 -22359 3 FreeSans 400 0 0 0 vref
 port 14 e

@@ -117,12 +117,6 @@ C {devices/lab_wire.sym} 1320 -1120 0 0 {name=l31 sig_type=std_logic lab=P_IN}
 C {devices/lab_wire.sym} 1320 -1040 0 0 {name=l32 sig_type=std_logic lab=P_IN_N}
 C {devices/lab_wire.sym} 1500 -1220 0 0 {name=l33 sig_type=std_logic lab=VDD_PWR}
 C {devices/lab_wire.sym} 960 -1220 0 0 {name=l1 sig_type=std_logic lab=VDD_PWR}
-C {sky130_fd_pr/res_generic_po.sym} 490 -560 1 0 {name=R1
-W=2
-L=6.3
-model=res_generic_po
-spiceprefix=R
-mult=1}
 C {devices/lab_wire.sym} 440 -560 0 0 {name=l3 sig_type=std_logic lab=SW_NODE}
 C {devices/lab_wire.sym} 540 -640 0 1 {name=l4 sig_type=std_logic lab=SW_NODE_ESD}
 C {devices/lab_wire.sym} 1520 -580 0 1 {name=l11 sig_type=std_logic lab=REF_CURRENT_KELVIN}
@@ -136,3 +130,9 @@ mult=1}
 C {esd_cell_well.sym} 780 -560 0 0 {name=x3}
 C {devices/lab_wire.sym} 760 -460 0 0 {name=l9 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 780 -680 0 0 {name=l12 sig_type=std_logic lab=VDD_PWR}
+C {res_generic_m2.sym} 490 -560 1 0 {name=R3
+W=2
+L=6.3
+model=res_generic_po
+spiceprefix=R
+mult=1}
