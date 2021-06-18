@@ -39,9 +39,8 @@ N 5280 -340 5300 -340 { lab=P_IN}
 N 3880 -360 3900 -360 { lab=SW_NODE_ESD}
 N 3880 -400 3900 -400 { lab=SENSE_FET}
 N 3880 -440 3900 -440 { lab=SENSE_FET_KELVIN}
-N 4140 100 4140 120 { lab=vssa2}
 N 4020 100 4020 120 { lab=vdda2}
-N 4240 240 4260 240 { lab=timeout_int}
+N 4170 210 4190 210 { lab=timeout_int}
 N 4820 -480 4840 -480 { lab=timeout_int}
 N 4820 -360 4840 -360 { lab=cycle_end}
 N 4820 -400 4840 -400 { lab=io_in_3v3[15]}
@@ -57,7 +56,7 @@ N 4260 -220 4280 -220 { lab=gpio_analog[10]}
 N 3880 -320 3900 -320 { lab=gpio_analog[12]}
 N 3880 -280 3900 -280 { lab=gpio_analog[13]}
 N 3880 -240 3900 -240 { lab=gpio_analog[11]}
-N 3900 240 3920 240 { lab=gpio_analog[14]}
+N 3850 190 3870 190 { lab=gpio_analog[14]}
 N 4000 -60 4000 -40 { lab=gpio_analog[17]}
 N 4060 -60 4060 0 { lab=gpio_analog[16]}
 N 4140 -60 4140 40 { lab=gpio_analog[15]}
@@ -255,6 +254,8 @@ N 7020 1180 7020 1200 { lab=vssa2}
 N 6900 1180 6900 1200 { lab=vssa2}
 N 6900 1200 6900 1220 { lab=vssa2}
 N 6440 1220 6900 1220 { lab=vssa2}
+N 4020 260 4020 280 {}
+N 4170 170 4180 170 {}
 C {devices/iopin.sym} 3240 -470 0 0 {name=p1 lab=vdda1}
 C {devices/iopin.sym} 3240 -440 0 0 {name=p2 lab=vdda2}
 C {devices/iopin.sym} 3240 -410 0 0 {name=p3 lab=vssa1}
@@ -325,15 +326,14 @@ C {devices/lab_wire.sym} 5320 320 0 1 {name=l33 sig_type=std_logic lab=SENSE_FET
 C {devices/lab_wire.sym} 5320 360 0 1 {name=l34 sig_type=std_logic lab=SENSE_FET}
 C {devices/lab_wire.sym} 5320 460 0 1 {name=l35 sig_type=std_logic lab=SW_NODE_ESD}
 C {devices/lab_wire.sym} 5320 400 0 1 {name=l36 sig_type=std_logic lab=SW_NODE}
-C {osc_placeholder.sym} 4070 220 0 0 {name=x4}
 C {devices/lab_wire.sym} 4020 100 0 0 {name=l37 sig_type=std_logic lab=vdda2}
-C {devices/lab_wire.sym} 4140 100 0 0 {name=l38 sig_type=std_logic lab=vssa2}
-C {devices/lab_wire.sym} 4260 240 0 1 {name=l39 sig_type=std_logic lab=timeout_int}
+C {devices/lab_wire.sym} 4020 280 0 0 {name=l38 sig_type=std_logic lab=vssa2}
+C {devices/lab_wire.sym} 4190 210 0 1 {name=l39 sig_type=std_logic lab=timeout_int}
 C {devices/lab_wire.sym} 4820 -480 0 0 {name=l40 sig_type=std_logic lab=timeout_int}
 C {devices/lab_wire.sym} 4000 -40 0 0 {name=l41 sig_type=std_logic lab=gpio_analog[17]}
 C {devices/lab_wire.sym} 4060 0 0 0 {name=l45 sig_type=std_logic lab=gpio_analog[16]}
 C {devices/lab_wire.sym} 4140 40 0 0 {name=l46 sig_type=std_logic lab=gpio_analog[15]}
-C {devices/lab_wire.sym} 3900 240 0 0 {name=l42 sig_type=std_logic lab=gpio_analog[14]}
+C {devices/lab_wire.sym} 3850 190 0 0 {name=l42 sig_type=std_logic lab=gpio_analog[14]}
 C {devices/lab_wire.sym} 3880 -280 0 0 {name=l43 sig_type=std_logic lab=gpio_analog[13]}
 C {devices/lab_wire.sym} 3880 -320 0 0 {name=l44 sig_type=std_logic lab=gpio_analog[12]}
 C {devices/lab_wire.sym} 3880 -240 0 0 {name=l47 sig_type=std_logic lab=gpio_analog[11]}
@@ -676,3 +676,5 @@ C {devices/lab_wire.sym} 4880 320 0 0 {name=l78 sig_type=std_logic lab=vssa2}
 C {devices/lab_wire.sym} 4340 880 0 0 {name=l61 sig_type=std_logic lab=VDD_PWR}
 C {devices/lab_wire.sym} 3880 880 0 0 {name=l52 sig_type=std_logic lab=VDD_PWR}
 C {devices/lab_wire.sym} 3420 880 0 0 {name=l66 sig_type=std_logic lab=VDD_PWR}
+C {oscillator.sym} 4020 190 0 0 {name=x4}
+C {devices/lab_wire.sym} 4180 170 0 1 {name=l88 sig_type=std_logic lab=gpio_analog[0]}
