@@ -188,6 +188,8 @@ R46 vccd2 net30 20m m=1
 R47 vccd1 net31 20m m=1
 R48 vdda2 net10 20m m=1
 R49 vdda1 net32 20m m=1
+V18 imon isensea 1
+R50 isensea GND 120 m=1
 **** begin user architecture code
 
 
@@ -201,7 +203,7 @@ R49 vdda1 net32 20m m=1
 
 .control
 save all
-tran 40n 300u
+tran 40n 40u
 write analog_wrapper_tb.raw
 .endc
 

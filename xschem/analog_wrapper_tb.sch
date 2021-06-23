@@ -302,6 +302,10 @@ N 1160 -2100 1160 -2040 { lab=vdda2}
 N 1200 -1560 1200 -1520 { lab=#net32}
 N 1200 -1680 1200 -1620 { lab=vdda1}
 N 980 -1680 980 -1560 { lab=#net9}
+N -840 -1880 -840 -1860 { lab=GND}
+N -840 -1960 -840 -1940 { lab=isensea}
+N -840 -2040 -840 -2020 { lab=imon}
+N -840 -1940 -800 -1940 { lab=isensea}
 C {user_analog_project_wrapper.sym} 130 -100 0 0 {name=x1}
 C {devices/code_shown.sym} 920 -130 0 0 {name=s1 only_toplevel=false value="
 .param VIN = 3.3
@@ -314,7 +318,7 @@ C {devices/code_shown.sym} 920 -130 0 0 {name=s1 only_toplevel=false value="
 
 .control
 save all
-tran 40n 300u
+tran 40n 40u
 write analog_wrapper_tb.raw
 .endc
 "}
@@ -908,3 +912,12 @@ value=20m
 footprint=10
 device=resistor
 m=1}
+C {devices/vsource.sym} -840 -1990 0 0 {name=V18 value=1}
+C {devices/res.sym} -840 -1910 0 0 {name=R50
+value=120
+footprint=1206
+device=resistor
+m=1}
+C {devices/gnd.sym} -840 -1860 0 0 {name=l140 lab=GND}
+C {devices/lab_wire.sym} -840 -2040 0 1 {name=l141 sig_type=std_logic lab=imon}
+C {devices/lab_wire.sym} -800 -1940 0 1 {name=l142 sig_type=std_logic lab=isensea}

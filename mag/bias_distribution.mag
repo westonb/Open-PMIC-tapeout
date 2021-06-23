@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1624002729
+timestamp 1624430562
 << nwell >>
 rect -3000 40 3000 4500
 << pwell >>
@@ -335,14 +335,14 @@ rect -3000 -4256 -2756 -3956
 rect -2156 -4256 2156 -3956
 rect 2756 -4256 3000 -3956
 rect -3000 -4500 3000 -4256
-use sky130_fd_pr__nfet_g5v0d10v5_DQEKPQ  xm1
-timestamp 1624002729
-transform 1 0 0 0 1 -2000
-box -2609 -588 2609 588
 use sky130_fd_pr__pfet_g5v0d10v5_QNH2MW  xm2
-timestamp 1624002729
+timestamp 1624430562
 transform 1 0 0 0 1 2000
 box -1643 -600 1643 600
+use sky130_fd_pr__nfet_g5v0d10v5_DQEKPQ  xm1
+timestamp 1624430562
+transform 1 0 0 0 1 -2000
+box -2609 -588 2609 588
 << labels >>
 flabel metal4 -3000 3700 -3000 4500 3 FreeSans 480 0 0 0 vdd
 port 7 e
